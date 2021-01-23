@@ -12,6 +12,7 @@ BOT_NAME = 'tutorial'
 SPIDER_MODULES = ['tutorial.spiders']
 NEWSPIDER_MODULE = 'tutorial.spiders'
 
+FEED_EXPORT_ENCODING = 'utf-8'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'tutorial (+http://www.yourdomain.com)'
@@ -64,7 +65,7 @@ ROBOTSTXT_OBEY = False
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'tutorial.pipelines.CsvPipeline': 300,
-   'scrapy.pipelines.images.ImagesPipeline':1
+   # 'scrapy.pipelines.images.ImagesPipeline':1
 }
 
 IMAGES_STORE = 'assets/images'
@@ -74,7 +75,7 @@ IMAGES_STORE = 'assets/images'
 #AUTOTHROTTLE_ENABLED = True
 # The initial download delay
 #AUTOTHROTTLE_START_DELAY = 5
-# The maximum download delay to be set in case of high latencies
+# The maximum download delay to be set in case of high lat`enc`ies
 #AUTOTHROTTLE_MAX_DELAY = 60
 # The average number of requests Scrapy should be sending in parallel to
 # each remote server
